@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.PushService;
 
@@ -20,7 +19,6 @@ public class MyActivity extends Activity {
         //setContentView(R.layout.main);
 
         // set parse push noti
-        Parse.initialize(this, "8Ky2BPjaxF9IB0E0IDkHOFwVsx14t8EVCdNmGS29", "vEiDkbKdbQyob0HSaWEvmpH5WOEY7jBhXmeMJzVz");
         PushService.setDefaultPushCallback(this, MyActivity.class);
         ParseAnalytics.trackAppOpened(getIntent());
 
